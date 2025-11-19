@@ -104,7 +104,12 @@ function checkGitHubRemote() {
     
     const remoteUrl = executeCommand('git remote get-url origin');
     if (remoteUrl) {
-        if (remoteUrl.includes('github.com')) {
+        // Check for legitimate GitHub URLs (HTTPS or SSH)
+        // HTTPS: https://github.com/... or http://github.com/...
+        // SSH: git@github.com:... or ssh://git@github.com/...
+        const isGitHubUrl = /^(https?:\/\/|git@|ssh:\/\/git@)github\.com[/:]/i.test(remoteUrl);
+        
+        if (isGitHubUrl) {
             printSuccess(`GitHub remote is configured: ${remoteUrl}`);
             return true;
         } else {
