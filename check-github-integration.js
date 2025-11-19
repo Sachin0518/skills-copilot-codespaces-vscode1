@@ -3,6 +3,11 @@
 /**
  * GitHub Integration Checker for VS Code
  * This script helps verify if VS Code is properly configured to use GitHub
+ * 
+ * Usage: node check-github-integration.js
+ * 
+ * @author GitHub Skills
+ * @version 1.0.0
  */
 
 const { execSync } = require('child_process');
