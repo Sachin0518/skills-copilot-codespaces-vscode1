@@ -15,6 +15,23 @@ _GitHub Copilot can help you code by offering autocomplete-style suggestions rig
 
 </header>
 
+## 🔍 Check Your GitHub Integration
+
+Before you start, verify that VS Code is properly configured to use GitHub:
+
+```bash
+node check-github-integration.js
+```
+
+This will check:
+- ✅ Git installation and configuration
+- ✅ GitHub remote connection
+- ✅ GitHub authentication
+- ✅ VS Code extensions (GitHub Copilot)
+- ✅ Dev Container configuration
+
+For detailed instructions, see [GITHUB_INTEGRATION_GUIDE.md](GITHUB_INTEGRATION_GUIDE.md)
+
 <!--
   <<< Author notes: Step 3 >>>
   Start this step by acknowledging the previous step.
